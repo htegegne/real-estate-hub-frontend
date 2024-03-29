@@ -1,0 +1,16 @@
+<p>realtor-profile works!</p>
+
+<div *ngIf="realtor | async as realtor">
+    <h2>Realtor Profile</h2>
+    <div>
+      <p><strong>Realtor ID:</strong> {{ realtor.realtorID }}</p>
+      <p><strong>First Name:</strong> {{ realtor.firstName }}</p>
+      <p><strong>Last Name:</strong> {{ realtor.lastName }}</p>
+      <p><strong>Email:</strong> {{ realtor.emailId }}</p>
+      <p><strong>Phone Number:</strong> {{ realtor.phoneNumber }}</p>
+      <p><strong>Address:</strong> {{  realtor.realtorAddress.addressId }}</p>
+      <p><strong>Address:</strong> {{  realtor.realtorAddress.subCity }}</p>
+    </div>
+</div>
+    
+  

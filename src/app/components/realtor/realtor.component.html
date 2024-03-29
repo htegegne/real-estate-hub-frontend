@@ -1,0 +1,36 @@
+<p>realtor works!</p>
+<div>
+    <h2>Realtors</h2>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Realtor details</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Phone number</th>
+                <th>Sub City</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr *ngFor="let realtor of realtors ">
+                <td>{{realtor.realtorID}}</td>
+                <td><a [routerLink]="['/realtor-profile', realtor.realtorID]">Details</a> </td>
+                <td>{{ realtor.firstName }}</td> 
+                <td>{{ realtor.lastName }}</td>
+                <td>{{ realtor.emailId }}</td>
+                <td>{{ realtor.phoneNumber }}</td>
+                <td>{{ realtor.realtorAddress.subCity }} </td>
+                    <td><button (click)="viewRealtorDetails(realtor.realtorID)">Details</button></td>
+                    
+            </tr>
+        
+        </tbody>
+    </table>
+  </div>
+  
+
+
+  

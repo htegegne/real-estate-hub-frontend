@@ -1,0 +1,47 @@
+<p>create-realtor works!</p>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" formControlName="firstName">
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" formControlName="lastName">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+    </div>
+    <div>
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" formControlName="phoneNumber">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+    <div formGroupName="realtorAddress">
+      <div>
+        <label for="subCity">Sub City:</label>
+        <input type="text" id="subCity" formControlName="subCity">
+      </div>
+      <div>
+        <label for="district">District:</label>
+        <input type="text" id="district" formControlName="district">
+      </div>
+      <div>
+        <label for="houseNo">House Number:</label>
+        <input type="text" id="houseNo" formControlName="houseNo">
+      </div>
+      <div>
+        <label for="blockName">Block Name:</label>
+        <input type="text" id="blockName" formControlName="blockName">
+      </div>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+  
+  <div *ngIf="registrationError" class="error-message">
+    {{ registrationError }}
+  </div>
+  
